@@ -1,0 +1,8 @@
+example:
+    property: I AM THE DEFAULT
+
+logstash:
+    host: logstash.aws.local:5000
+
+logging:
+    config: classpath:logback-delayed.xml
