@@ -40,6 +40,13 @@ spring:
           filters:
           - RewritePath=/license/(?<path>.*), /$\{path}
           - RemoveRequestHeader= Cookie,Set-Cookie
+        - id: behaviosec-service
+          uri: lb://behaviosec-service
+          predicates:
+          - Path=/behaviosec/**
+          filters:
+          - RewritePath=/BehavioSecAPI/(?<path>.*), /$\{path}
+          - RemoveRequestHeader= Cookie,Set-Cookie
 
 
 keycloak:
